@@ -3,8 +3,20 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Zap } from "lucide-react";
 
 const Login = () => {
@@ -27,7 +39,7 @@ const Login = () => {
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-gradient-to-br from-solar to-wind flex items-center justify-center">
               <Zap className="h-8 w-8 text-solar-foreground" />
             </div>
-            <CardTitle className="text-2xl font-bold">Energy Grid Control</CardTitle>
+            <CardTitle className="text-2xl font-bold">RAYS X1</CardTitle>
             <CardDescription className="text-muted-foreground">
               Access your renewable energy monitoring dashboard
             </CardDescription>
@@ -45,7 +57,7 @@ const Login = () => {
                   className="bg-secondary border-border/50"
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
                 <Input
@@ -73,13 +85,13 @@ const Login = () => {
                 </Select>
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-gradient-to-r from-solar to-wind hover:from-solar/80 hover:to-wind/80 text-solar-foreground font-medium"
               >
                 Access Dashboard
               </Button>
-              
+
               <div className="text-center text-sm text-muted-foreground">
                 Demo credentials: any username/password
               </div>
