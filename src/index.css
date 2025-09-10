@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IoT Energy Dashboard Design System - Industrial/Energy Theme
+All colors MUST be HSL. Dark theme optimized for professional energy monitoring.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Light theme (default) */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 200 80% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 120 70% 45%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 200 80% 50%;
+
+    --radius: 0.75rem;
+
+    /* Energy-specific colors - Light theme */
+    --solar: 45 95% 55%;
+    --solar-foreground: 210 40% 98%;
+    
+    --wind: 200 85% 55%;
+    --wind-foreground: 210 40% 98%;
+    
+    --battery: 120 75% 45%;
+    --battery-foreground: 210 40% 98%;
+    
+    --grid: 280 55% 55%;
+    --grid-foreground: 210 40% 98%;
+    
+    --warning: 35 90% 55%;
+    --warning-foreground: 210 40% 98%;
+    
+    --success: 120 75% 45%;
+    --success-foreground: 210 40% 98%;
+    
+    --critical: 0 84.2% 60.2%;
+    --critical-foreground: 210 40% 98%;
+
+    /* Status colors - Light theme */
+    --online: 120 75% 45%;
+    --offline: 215 25% 55%;
+    --fault: 0 84.2% 60.2%;
+
+    /* Gradients */
+    --gradient-solar: linear-gradient(135deg, hsl(var(--solar)), hsl(45 90% 65%));
+    --gradient-wind: linear-gradient(135deg, hsl(var(--wind)), hsl(200 80% 65%));
+    --gradient-battery: linear-gradient(135deg, hsl(var(--battery)), hsl(120 70% 55%));
+    --gradient-energy: linear-gradient(135deg, hsl(var(--solar)), hsl(var(--wind)));
+    
+    /* Glows and effects */
+    --glow-solar: 0 0 20px hsl(var(--solar) / 0.2);
+    --glow-wind: 0 0 20px hsl(var(--wind) / 0.2);
+    --glow-battery: 0 0 20px hsl(var(--battery) / 0.2);
+    --glow-critical: 0 0 20px hsl(var(--critical) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar colors - Light theme */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 200 80% 50%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 94%;
+    --sidebar-accent-foreground: 222.2 84% 4.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 200 80% 50%;
+  }
+
+  .dark {
+    /* Base colors - Dark industrial theme */
+    --background: 215 28% 6%;
+    --foreground: 210 20% 94%;
+
+    --card: 215 28% 8%;
+    --card-foreground: 210 20% 94%;
+
+    --popover: 215 28% 8%;
+    --popover-foreground: 210 20% 94%;
+
+    --primary: 200 80% 60%;
+    --primary-foreground: 215 28% 6%;
+
+    --secondary: 215 25% 12%;
+    --secondary-foreground: 210 20% 94%;
+
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 120 70% 50%;
+    --accent-foreground: 215 28% 6%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 20% 94%;
+
+    --border: 215 25% 15%;
+    --input: 215 25% 15%;
+    --ring: 200 80% 60%;
+
+    /* Energy-specific colors - Dark theme */
+    --solar: 45 90% 60%;
+    --solar-foreground: 215 28% 6%;
+    
+    --wind: 200 80% 60%;
+    --wind-foreground: 215 28% 6%;
+    
+    --battery: 120 70% 50%;
+    --battery-foreground: 215 28% 6%;
+    
+    --grid: 280 50% 60%;
+    --grid-foreground: 215 28% 6%;
+    
+    --warning: 35 85% 60%;
+    --warning-foreground: 215 28% 6%;
+    
+    --success: 120 70% 50%;
+    --success-foreground: 215 28% 6%;
+    
+    --critical: 0 75% 60%;
+    --critical-foreground: 210 20% 94%;
+
+    /* Status colors - Dark theme */
+    --online: 120 70% 50%;
+    --offline: 215 15% 45%;
+    --fault: 0 75% 60%;
+
+    /* Gradients */
+    --gradient-solar: linear-gradient(135deg, hsl(var(--solar)), hsl(45 85% 70%));
+    --gradient-wind: linear-gradient(135deg, hsl(var(--wind)), hsl(200 75% 70%));
+    --gradient-battery: linear-gradient(135deg, hsl(var(--battery)), hsl(120 65% 60%));
+    --gradient-energy: linear-gradient(135deg, hsl(var(--solar)), hsl(var(--wind)));
+    
+    /* Glows and effects */
+    --glow-solar: 0 0 20px hsl(var(--solar) / 0.3);
+    --glow-wind: 0 0 20px hsl(var(--wind) / 0.3);
+    --glow-battery: 0 0 20px hsl(var(--battery) / 0.3);
+    --glow-critical: 0 0 20px hsl(var(--critical) / 0.5);
+
+    /* Sidebar colors - Dark theme */
+    --sidebar-background: 215 28% 4%;
+    --sidebar-foreground: 210 20% 94%;
+    --sidebar-primary: 200 80% 60%;
+    --sidebar-primary-foreground: 215 28% 6%;
+    --sidebar-accent: 215 25% 10%;
+    --sidebar-accent-foreground: 210 20% 94%;
+    --sidebar-border: 215 25% 12%;
+    --sidebar-ring: 200 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
